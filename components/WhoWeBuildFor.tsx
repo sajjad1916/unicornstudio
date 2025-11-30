@@ -15,35 +15,35 @@ export default function WhoWeBuildFor() {
   ];
 
   return (
-    <section id="who" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="who" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium mb-6">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
             Our Clients
           </div>
-          <h2 className="text-base font-bold text-gray-900 mb-2 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 tracking-tight px-4">
             Who We Build For
           </h2>
-          <p className="text-xs text-gray-600 max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-light px-4">
             Partnering with visionaries who know their domain
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {audiences.map((audience, index) => (
             <div
               key={index}
-              className="group relative bg-white p-10 rounded-2xl border border-gray-200 card-hover"
+              className="group relative bg-white p-6 sm:p-8 lg:p-10 rounded-2xl border border-gray-200 card-hover"
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
 
               <div className="relative z-10">
-                <div className="text-2xl mb-3">{audience.icon}</div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{audience.icon}</div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                   {audience.title}
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed mb-3 font-light">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6 font-light">
                   {audience.description}
                 </p>
 

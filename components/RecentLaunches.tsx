@@ -49,19 +49,19 @@ export default function RecentLaunches() {
   };
 
   return (
-    <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="portfolio" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-base font-bold text-gray-900 mb-2">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Recent Launches
           </h2>
-          <p className="text-xs text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600 px-4">
             Real products, real results, real impact
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative overflow-hidden rounded-3xl bg-white shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white shadow-2xl">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -72,16 +72,16 @@ export default function RecentLaunches() {
                 className="min-w-full flex flex-col lg:flex-row"
               >
                 {/* Image Side */}
-                <div className="lg:w-3/5 relative bg-gradient-to-br from-blue-500 to-cyan-500 min-h-[400px] lg:min-h-[500px]">
+                <div className="lg:w-3/5 relative bg-gradient-to-br from-blue-500 to-cyan-500 min-h-[250px] sm:min-h-[350px] lg:min-h-[500px]">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-6xl font-bold opacity-20">
+                    <div className="text-white text-3xl sm:text-4xl lg:text-6xl font-bold opacity-20">
                       {project.name}
                     </div>
                   </div>
                 </div>
 
                 {/* Content Side */}
-                <div className="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
+                <div className="lg:w-2/5 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, idx) => (
                       <span
@@ -93,24 +93,24 @@ export default function RecentLaunches() {
                     ))}
                   </div>
 
-                  <h3 className="text-sm font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                     {project.name}
                   </h3>
 
-                  <p className="text-xs text-gray-700 mb-2 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-700 mb-2 sm:mb-3 leading-relaxed">
                     {project.description}
                   </p>
 
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
                     {project.stats}
                   </p>
 
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-sm sm:text-base text-blue-600 font-semibold hover:gap-3 transition-all duration-300"
                   >
                     <span>View Case Study</span>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </a>

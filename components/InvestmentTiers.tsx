@@ -80,38 +80,123 @@ export default function InvestmentTiers() {
   ];
 
   return (
-    <section id="pricing" className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
+    <section id="pricing" className="relative py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.03)_0%,transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.03)_0%,transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 mb-6">
-            <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 mb-4 sm:mb-6">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            <span className="text-sm font-semibold text-blue-900">Investment Packages</span>
+            <span className="text-xs sm:text-sm font-semibold text-blue-900">Investment Packages</span>
           </div>
 
-          <h2 className="text-base font-bold text-gray-900 mb-2 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 tracking-tight px-4">
             Choose your starting point
           </h2>
-          <p className="text-xs text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Fixed investment, flexible scope. Every package designed to deliver real business value.
           </p>
         </div>
 
-        {/* Packages Grid - Unique Layout */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        {/* Mobile Horizontal Tab Design */}
+        <div className="lg:hidden mb-12">
+          {/* Horizontal Package Tabs */}
+          <div className="flex gap-2 mb-4 overflow-x-auto pb-2 px-1">
+            {packages.map((pkg, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`relative flex-shrink-0 px-3 py-2 rounded-lg transition-all duration-300 border-2 overflow-hidden group ${
+                  activeIndex === index
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300'
+                }`}
+              >
+                {/* Animated line on hover - only for non-active tabs */}
+                {activeIndex !== index && (
+                  <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                )}
+                <div className="relative z-10 text-xs font-bold">
+                  {pkg.name}
+                </div>
+                <div className="relative z-10 text-xs font-semibold mt-0.5">
+                  ${pkg.investment}
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Active Package Content */}
+          <div className="bg-white rounded-xl border-2 border-gray-900 shadow-xl overflow-hidden">
+            <div className="h-0.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
+
+            <div className="p-4">
+              {/* Investment & Timeline */}
+              <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200">
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    ${packages[activeIndex].investment}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {packages[activeIndex].timeline}
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs font-semibold text-gray-500 uppercase">
+                    {packages[activeIndex].tag}
+                  </div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    {packages[activeIndex].ideal}
+                  </div>
+                </div>
+              </div>
+
+              {/* What You Get - Compact */}
+              <div className="space-y-2 mb-4">
+                {packages[activeIndex].delivers.slice(0, 4).map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2">
+                    <div className="w-4 h-4 rounded bg-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-xs text-gray-700 leading-relaxed">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+                {packages[activeIndex].delivers.length > 4 && (
+                  <div className="text-xs text-gray-500 pl-6">
+                    +{packages[activeIndex].delivers.length - 4} more
+                  </div>
+                )}
+              </div>
+
+              {/* CTA Button */}
+              <a
+                href="#contact"
+                className="block w-full py-2.5 px-4 bg-gray-900 text-white rounded-lg font-semibold text-sm text-center hover:bg-gray-800 transition-all duration-300"
+              >
+                Start This Package
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Grid Layout */}
+        <div className="hidden lg:grid grid-cols-2 gap-6 mb-12">
           {packages.map((pkg, index) => (
             <div
               key={index}
               onClick={() => setActiveIndex(index)}
               onMouseEnter={() => setActiveIndex(index)}
-              className={`group cursor-pointer relative transition-all duration-500 ${
-                pkg.featured ? "md:col-span-2" : ""
+              className={`group/card cursor-pointer relative transition-all duration-500 ${
+                pkg.featured ? "col-span-2" : ""
               } ${
                 activeIndex === index ? "scale-[1.02]" : "scale-100"
               }`}
@@ -124,12 +209,16 @@ export default function InvestmentTiers() {
                     : "border-gray-200 shadow-lg bg-white hover:border-gray-300"
                 }`}
               >
+                {/* Animated line on hover - only for non-active cards */}
+                {activeIndex !== index && (
+                  <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transform translate-x-[-100%] group-hover/card:translate-x-0 transition-transform duration-700 ease-out rounded-t-3xl" />
+                )}
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${pkg.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Content */}
-                <div className={`relative p-8 ${pkg.featured ? "md:p-12" : ""}`}>
-                  <div className={`grid gap-8 ${pkg.featured ? "md:grid-cols-2 md:gap-16" : ""}`}>
+                <div className={`relative p-8 ${pkg.featured ? "p-12" : ""}`}>
+                  <div className={`grid gap-8 ${pkg.featured ? "grid-cols-2 gap-16" : ""}`}>
                     {/* Left Side - Outcome & Info */}
                     <div className="space-y-6">
                       {/* Tag & Name */}
@@ -137,31 +226,31 @@ export default function InvestmentTiers() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-wider mb-3">
                           {pkg.tag}
                         </div>
-                        <h3 className="text-sm font-bold text-gray-900 mb-2">
+                        <h3 className="text-xl font-bold text-gray-900 mb-3">
                           {pkg.name}
                         </h3>
-                        <p className="text-xs text-gray-700 leading-relaxed">
+                        <p className="text-base text-gray-700 leading-relaxed">
                           {pkg.outcome}
                         </p>
                       </div>
 
                       {/* Investment Display - Unique Style */}
-                      <div className="flex items-end gap-4 py-4 border-y border-gray-200">
+                      <div className="flex items-end gap-6 py-6 border-y border-gray-200">
                         <div>
-                          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                          <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
                             Investment
                           </div>
                           <div className="flex items-baseline gap-1">
-                            <span className="text-2xl font-bold text-gray-900">
+                            <span className="text-3xl font-bold text-gray-900">
                               ${pkg.investment}
                             </span>
                           </div>
                         </div>
                         <div className="pb-1">
-                          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                          <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
                             Timeline
                           </div>
-                          <div className="text-sm font-semibold text-gray-700">
+                          <div className="text-base font-semibold text-gray-700">
                             {pkg.timeline}
                           </div>
                         </div>
@@ -185,10 +274,10 @@ export default function InvestmentTiers() {
 
                     {/* Right Side - What You Get */}
                     <div className="space-y-4">
-                      <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">
+                      <div className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-6">
                         What You Get
                       </div>
-                      <div className="space-y-3">
+                      <div className="space-y-4">
                         {pkg.delivers.map((item, idx) => (
                           <div key={idx} className="flex items-start gap-3 group/item">
                             <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300">
@@ -196,7 +285,7 @@ export default function InvestmentTiers() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                               </svg>
                             </div>
-                            <span className="text-xs text-gray-700 leading-relaxed pt-0.5">
+                            <span className="text-sm text-gray-700 leading-relaxed pt-0.5">
                               {item}
                             </span>
                           </div>
@@ -220,9 +309,9 @@ export default function InvestmentTiers() {
                   </div>
                 </div>
 
-                {/* Active Indicator */}
+                {/* Active Indicator - Top gradient line */}
                 {activeIndex === index && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-t-3xl" />
                 )}
               </div>
             </div>

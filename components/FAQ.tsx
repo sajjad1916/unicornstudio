@@ -33,15 +33,15 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-base font-bold text-gray-900 mb-2">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Frequently Asked Questions
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -49,13 +49,13 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-4 py-3 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="text-sm font-semibold text-gray-900 pr-3">
+                <span className="text-sm sm:text-base font-semibold text-gray-900 pr-3">
                   {faq.question}
                 </span>
                 <svg
-                  className={`w-6 h-6 text-blue-600 flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-5 h-5 sm:w-6 sm:h-6 text-blue-600 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? "transform rotate-180" : ""
                   }`}
                   fill="none"
@@ -76,8 +76,8 @@ export default function FAQ() {
                   openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="px-4 py-3 bg-gray-50">
-                  <p className="text-xs text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-50">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
