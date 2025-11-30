@@ -1,0 +1,69 @@
+export default function CTA() {
+  return (
+    <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-blob animation-delay-4000" />
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:64px_64px]" />
+
+      <div className="max-w-5xl mx-auto text-center relative z-10">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+          <span className="text-sm font-semibold text-white">Available for new projects</span>
+        </div>
+
+        {/* Heading */}
+        <h2 className="text-base font-bold text-white mb-3 tracking-tight">
+          Ready to Build with <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Unicorn Studio</span>?
+        </h2>
+
+        <p className="text-xs text-gray-300 mb-6 max-w-2xl mx-auto leading-relaxed">
+          Let's turn your vision into reality. Book a free strategy call and discover how we can accelerate your product journey.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
+          <a
+            href="mailto:hello@unicornstudio.com"
+            className="group relative px-5 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-white/20"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              Schedule a Strategy Call
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </a>
+          <a
+            href="mailto:hello@unicornstudio.com"
+            className="px-5 py-2.5 bg-white/10 text-white rounded-lg text-sm font-semibold border-2 border-white/20 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm"
+          >
+            hello@unicornstudio.com
+          </a>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="text-sm font-bold text-white mb-1">2 hours</div>
+            <div className="text-xs text-gray-400">Average response time</div>
+          </div>
+          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="text-sm font-bold text-white mb-1">Fixed pricing</div>
+            <div className="text-xs text-gray-400">No hourly billing surprises</div>
+          </div>
+          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="text-sm font-bold text-white mb-1">21 days</div>
+            <div className="text-xs text-gray-400">Minimum time to launch</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
