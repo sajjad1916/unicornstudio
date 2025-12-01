@@ -47,12 +47,16 @@ export default function WhatWeBuild() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
+              className={`relative rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
                 activeService === index
                   ? "border-blue-500 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg"
                   : "border-gray-200 bg-white"
               }`}
             >
+              {/* Animated blue border at top - moves left to right on active */}
+              <div className={`absolute top-0 left-0 h-1.5 w-full bg-blue-600 transform transition-transform duration-700 ease-out rounded-t-2xl ${
+                activeService === index ? "translate-x-0" : "translate-x-[-100%]"
+              }`} />
               {/* Service Header - Always Visible */}
               <button
                 onClick={() => setActiveService(index)}
@@ -151,8 +155,14 @@ export default function WhatWeBuild() {
 
           {/* Right Column - Content Display */}
           <div className="sticky top-8">
-            <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 p-10 rounded-2xl border border-gray-200 shadow-xl min-h-[350px] flex items-center">
-              <div>
+            <div className="relative bg-gradient-to-br from-gray-50 to-blue-50/30 p-10 rounded-2xl border border-gray-200 shadow-xl min-h-[350px] flex items-center overflow-hidden">
+              {/* Animated blue border at top - moves left to right */}
+              <div className="absolute top-0 left-0 h-1.5 w-full bg-blue-600 transform translate-x-[-100%] transition-transform duration-700 ease-out rounded-t-2xl animate-border"
+                key={activeService}
+                style={{ animation: 'slideIn 700ms ease-out forwards' }}
+              />
+
+              <div className="relative z-10">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
                   {services[activeService].name}
                 </h3>

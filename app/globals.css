@@ -170,3 +170,13 @@ html {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Slide in animation for border */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

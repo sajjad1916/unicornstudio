@@ -33,8 +33,11 @@ export default function WhoWeBuildFor() {
           {audiences.map((audience, index) => (
             <div
               key={index}
-              className="group relative bg-white p-6 sm:p-8 lg:p-10 rounded-2xl border border-gray-200 card-hover"
+              className="group relative bg-white p-6 sm:p-8 lg:p-10 rounded-2xl border-2 border-gray-200 hover:border-gray-900 transition-colors duration-300 overflow-hidden"
             >
+              {/* Animated blue border at top - moves left to right */}
+              <div className="absolute top-0 left-0 h-1.5 w-full bg-blue-600 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out rounded-t-2xl" />
+
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
 
