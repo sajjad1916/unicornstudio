@@ -13,12 +13,12 @@ export default function LogoCarousel() {
   const duplicatedCompanies = [...companies, ...companies];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-transparent overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-4 sm:mb-6 lg:mb-8">
+    <section className="py-8 sm:py-6 lg:py-4 px-4 sm:px-6 lg:px-8 bg-transparent overflow-hidden">
+      {/* <div className="max-w-7xl mx-auto mb-4 sm:mb-6 lg:mb-8">
         <p className="text-center text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider">
           Trusted by innovative companies
         </p>
-      </div>
+      </div> */}
 
       <div className="relative">
         {/* Gradient overlays for fade effect */}

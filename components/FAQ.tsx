@@ -30,6 +30,10 @@ export default function FAQ() {
       question: "Which AI models do you work with?",
       answer: "All major providers - OpenAI, Claude, Gemini, plus open-source models. We choose based on your specific needs and budget.",
     },
+    {
+      question: "Why \"Unicorn Studio\"?",
+      answer: "We help build the rare ones - products that achieve product-market fit, sustainable growth, and real impact. Your unicorn doesn't need a billion-dollar valuation. It needs to solve real problems profitably.",
+    },
   ];
 
   return (

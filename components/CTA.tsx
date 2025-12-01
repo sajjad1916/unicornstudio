@@ -20,11 +20,11 @@ export default function CTA() {
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 tracking-tight px-4">
-          Ready to Build with <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Unicorn Studio</span>?
+          Ready to Build Your <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Unicorn</span>?
         </h2>
 
         <p className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
-          Let's turn your vision into reality. Book a free strategy call and discover how we can accelerate your product journey.
+          Stop trading time for money. Start building products that scale. Let's turn your expertise into recurring revenue.
         </p>
 
         {/* CTA Buttons */}
@@ -48,20 +48,11 @@ export default function CTA() {
           </a>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto">
-          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-            <div className="text-sm font-bold text-white mb-1">2 hours</div>
-            <div className="text-xs text-gray-400">Average response time</div>
-          </div>
-          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-            <div className="text-sm font-bold text-white mb-1">Fixed pricing</div>
-            <div className="text-xs text-gray-400">No hourly billing surprises</div>
-          </div>
-          <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-            <div className="text-sm font-bold text-white mb-1">21 days</div>
-            <div className="text-xs text-gray-400">Minimum time to launch</div>
-          </div>
+        {/* Response Time Note */}
+        <div className="text-center">
+          <p className="text-sm text-gray-400">
+            Usually respond within 2 hours during business hours
+          </p>
         </div>
       </div>
     </section>
