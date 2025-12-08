@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4 group-hover:bg-blue-600 group-hover:text-white transition-all duration-700 ease-in-out transform group-hover:translate-x-[calc(100%-3rem)] group-hover:scale-110">
                   {reason.icon}
                 </div>
 

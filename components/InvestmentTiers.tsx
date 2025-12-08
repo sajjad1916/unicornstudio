@@ -188,7 +188,7 @@ export default function InvestmentTiers() {
           </div>
         </div>
 
-        {/* Desktop Grid Layout */}
+        {/* Desktop Grid Layout - 2x2 Grid */}
         <div className="hidden lg:grid grid-cols-2 gap-6 mb-12">
           {packages.map((pkg, index) => (
             <div
@@ -196,8 +196,6 @@ export default function InvestmentTiers() {
               onClick={() => setActiveIndex(index)}
               onMouseEnter={() => setActiveIndex(index)}
               className={`group/card cursor-pointer relative transition-all duration-500 ${
-                pkg.featured ? "col-span-2" : ""
-              } ${
                 activeIndex === index ? "scale-[1.02]" : "scale-100"
               }`}
             >
@@ -217,96 +215,72 @@ export default function InvestmentTiers() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${pkg.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Content */}
-                <div className={`relative p-8 ${pkg.featured ? "p-12" : ""}`}>
-                  <div className={`grid gap-8 ${pkg.featured ? "grid-cols-2 gap-16" : ""}`}>
-                    {/* Left Side - Outcome & Info */}
-                    <div className="space-y-6">
-                      {/* Tag & Name */}
-                      <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-bold uppercase tracking-wider mb-3">
-                          {pkg.tag}
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">
-                          {pkg.name}
-                        </h3>
-                        <p className="text-base text-gray-700 leading-relaxed">
-                          {pkg.outcome}
-                        </p>
-                      </div>
+                <div className="relative p-5">
+                  {/* Tag & Name */}
+                  <div className="mb-4">
+                    <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700 text-[10px] font-bold uppercase tracking-wider mb-2">
+                      {pkg.tag}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {pkg.name}
+                    </h3>
+                    <p className="text-xs text-gray-700 leading-snug">
+                      {pkg.outcome}
+                    </p>
+                  </div>
 
-                      {/* Investment Display - Unique Style */}
-                      <div className="flex items-end gap-6 py-6 border-y border-gray-200">
-                        <div>
-                          <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                            Investment
-                          </div>
-                          <div className="flex items-baseline gap-1">
-                            <span className="text-3xl font-bold text-gray-900">
-                              ${pkg.investment}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="pb-1">
-                          <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                            Timeline
-                          </div>
-                          <div className="text-base font-semibold text-gray-700">
-                            {pkg.timeline}
-                          </div>
-                        </div>
+                  {/* Investment Display */}
+                  <div className="flex items-end gap-4 py-3 mb-4 border-y border-gray-200">
+                    <div>
+                      <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                        Investment
                       </div>
-
-                      {/* Ideal For */}
-                      <div className="flex items-start gap-3 p-4 rounded-2xl bg-gray-50">
-                        <svg className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <div>
-                          <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
-                            Ideal for
-                          </div>
-                          <div className="text-sm font-medium text-gray-900">
-                            {pkg.ideal}
-                          </div>
-                        </div>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-xl font-bold text-gray-900">
+                          ${pkg.investment}
+                        </span>
                       </div>
                     </div>
-
-                    {/* Right Side - What You Get */}
-                    <div className="space-y-4">
-                      <div className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-6">
-                        What You Get
+                    <div className="pb-0.5">
+                      <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                        Timeline
                       </div>
-                      <div className="space-y-4">
-                        {pkg.delivers.map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-3 group/item">
-                            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300">
-                              <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                              </svg>
-                            </div>
-                            <span className="text-sm text-gray-700 leading-relaxed pt-0.5">
-                              {item}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* CTA Button */}
-                      <div className="pt-6">
-                        <a
-                          href="#contact"
-                          className={`block w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
-                            activeIndex === index
-                              ? "bg-gray-900 text-white shadow-lg hover:shadow-xl hover:bg-gray-800 scale-105"
-                              : "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                          }`}
-                        >
-                          Start This Package
-                        </a>
+                      <div className="text-xs font-semibold text-gray-700">
+                        {pkg.timeline}
                       </div>
                     </div>
                   </div>
+
+                  {/* What You Get */}
+                  <div className="space-y-2 mb-4">
+                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">
+                      What You Get
+                    </div>
+                    {pkg.delivers.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 group/item">
+                        <div className="w-4 h-4 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300">
+                          <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="text-xs text-gray-700 leading-snug">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href="#contact"
+                    className={`block w-full py-2.5 px-4 rounded-xl font-semibold text-sm text-center transition-all duration-300 ${
+                      activeIndex === index
+                        ? "bg-gray-900 text-white shadow-lg hover:shadow-xl hover:bg-gray-800"
+                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                    }`}
+                  >
+                    Start This Package
+                  </a>
                 </div>
 
                 {/* Active Indicator - Top gradient line */}
