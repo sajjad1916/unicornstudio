@@ -257,12 +257,12 @@ export default function BrandingPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
               {[
                 {
-                  name: "Startup Brand Package",
+                  name: "Branding Starter Package",
                   description: "Essential identity for early-stage companies",
-                  price: "Starting at $2,500",
+                  price: "$1,500",
                   features: [
                     "Logo design",
                     "Color palette",
@@ -273,36 +273,24 @@ export default function BrandingPage() {
                   highlighted: false
                 },
                 {
-                  name: "Complete Brand Identity",
-                  description: "Full brand system for growing companies",
-                  price: "Starting at $5,500",
+                  name: "Full Branding",
+                  description: "Complete brand system for growing companies",
+                  price: "$3,000",
                   features: [
-                    "Everything in Startup",
+                    "Everything in Starter",
                     "Brand voice guide",
                     "Extended guidelines",
                     "Digital templates",
+                    "Social media assets",
                     "4-week delivery"
                   ],
                   highlighted: true
-                },
-                {
-                  name: "Enterprise Branding",
-                  description: "Comprehensive identity for established companies",
-                  price: "Starting at $12,000",
-                  features: [
-                    "Full strategic process",
-                    "Multiple touchpoints",
-                    "Brand architecture",
-                    "Implementation support",
-                    "8-week delivery"
-                  ],
-                  highlighted: false
                 }
               ].map((tier, index) => (
-                <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
+                <div key={index} className={`group relative bg-white p-10 rounded-2xl border-2 transition-all duration-300 ${
                   tier.highlighted
-                    ? "border-blue-500 shadow-2xl scale-105"
-                    : "border-gray-200 hover:border-gray-900"
+                    ? "border-blue-500 shadow-2xl scale-105 overflow-visible"
+                    : "border-gray-200 hover:border-gray-900 overflow-hidden"
                 }`}>
                   {/* Animated blue border at top - moves left to right (only for non-highlighted) */}
                   {!tier.highlighted && (
@@ -319,9 +307,9 @@ export default function BrandingPage() {
                   )}
 
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                    <p className="text-gray-600 mb-4 text-sm">{tier.description}</p>
-                    <p className="text-3xl font-bold text-blue-600 mb-6">{tier.price}</p>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">{tier.name}</h3>
+                    <p className="text-gray-600 mb-6 text-base">{tier.description}</p>
+                    <p className="text-4xl font-bold text-blue-600 mb-8">{tier.price}</p>
                     <ul className="space-y-3 mb-8">
                       {tier.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2">
@@ -334,10 +322,10 @@ export default function BrandingPage() {
                     </ul>
                     <Link
                       href="#cta"
-                      className={`block text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
+                      className={`block text-center py-4 px-8 rounded-xl font-bold transition-all duration-300 ${
                         tier.highlighted
-                          ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
-                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                          ? "btn-primary text-white"
+                          : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                       }`}
                     >
                       Get Started
@@ -544,13 +532,13 @@ export default function BrandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#cta"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
               >
                 Start Your Brand Project
               </Link>
               <Link
                 href="/#cta"
-                className="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all duration-300 border-2 border-white/20"
+                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
               >
                 View Brand Portfolio
               </Link>

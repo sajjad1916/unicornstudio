@@ -7,8 +7,8 @@ export default function WhoWeBuildFor() {
       features: ["Productization", "Recurring Revenue", "Core Focus Maintained"]
     },
     {
-      title: "Solo Founders & Domain Experts",
-      description: "You understand the problem deeply. We make it real. Perfect for consultants, operators, and experts ready to scale their impact beyond billable hours.",
+      title: "Startup Founders and Entrepreneurs",
+      description: "We make your ideas into products whether you are raising your first round or validating your idea",
       icon: "👤",
       features: ["Deep Expertise", "Fast Execution", "Scalable Impact"]
     },

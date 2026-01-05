@@ -105,19 +105,18 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 px-4 w-full max-w-md sm:max-w-none mx-auto">
             <a
               href="#contact"
-              className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold text-base overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/40 text-center flex items-center justify-center gap-2"
+              className="btn-primary group w-full sm:w-auto px-8 py-4 text-white rounded-xl font-semibold text-base text-center flex items-center justify-center gap-2"
             >
               <span className="relative z-10">Start Building</span>
               <svg className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
             <a
               href="#portfolio"
-              className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-base border-2 border-gray-300 hover:border-blue-600 hover:bg-blue-50/50 hover:shadow-xl transition-all duration-300 text-center backdrop-blur-sm"
+              className="btn-secondary w-full sm:w-auto px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-base border-2 border-gray-300 text-center backdrop-blur-sm"
             >
-              See Our Work
+              <span className="relative z-10">See Our Work</span>
             </a>
           </div>
 

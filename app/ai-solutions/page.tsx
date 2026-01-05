@@ -195,7 +195,7 @@ export default function AISolutionsPage() {
               {
                 name: "AI Proof of Concept",
                 description: "Test your AI hypothesis with real users before full commitment",
-                price: "Starting at $6,500",
+                price: "$6,000",
                 features: [
                   "Feasibility study",
                   "Working prototype",
@@ -208,7 +208,7 @@ export default function AISolutionsPage() {
               {
                 name: "Complete AI Product",
                 description: "Production-ready AI solution with full infrastructure",
-                price: "Starting at $35,000",
+                price: "$20,000",
                 features: [
                   "Custom architecture",
                   "Model training & optimization",
@@ -221,7 +221,7 @@ export default function AISolutionsPage() {
               {
                 name: "AI Transformation Package",
                 description: "End-to-end AI integration across your business",
-                price: "Starting at $75,000",
+                price: "$40,000",
                 features: [
                   "Multi-system integration",
                   "Team training",
@@ -232,10 +232,10 @@ export default function AISolutionsPage() {
                 highlighted: false
               }
             ].map((tier, index) => (
-              <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
+              <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 ${
                 tier.highlighted
-                  ? "border-blue-500 shadow-2xl scale-105"
-                  : "border-gray-200 hover:border-gray-900"
+                  ? "border-blue-500 shadow-2xl scale-105 overflow-visible"
+                  : "border-gray-200 hover:border-gray-900 overflow-hidden"
               }`}>
                 {/* Animated blue border at top - moves left to right (only for non-highlighted) */}
                 {!tier.highlighted && (
@@ -269,8 +269,8 @@ export default function AISolutionsPage() {
                     href="#cta"
                     className={`block text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                       tier.highlighted
-                        ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
-                        : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                        ? "btn-primary text-white"
+                        : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                     }`}
                   >
                     Get Started
@@ -356,13 +356,13 @@ export default function AISolutionsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#cta"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
             >
               Start Your AI Project
             </Link>
             <Link
               href="/#cta"
-              className="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all duration-300 border-2 border-white/20"
+              className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
             >
               Book Strategy Call
             </Link>

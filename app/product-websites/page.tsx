@@ -241,17 +241,9 @@ export default function ProductWebsitesPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {[
-                {
-                  title: "Strategy & Research",
-                  items: [
-                    "User & competitor analysis",
-                    "Conversion optimization plan",
-                    "Content strategy",
-                    "SEO keyword research"
-                  ]
-                },
+                
                 {
                   title: "Design & Copy",
                   items: [
@@ -356,10 +348,10 @@ export default function ProductWebsitesPage() {
                   highlighted: false
                 }
               ].map((tier, index) => (
-                <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
+                <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 ${
                   tier.highlighted
-                    ? "border-blue-500 shadow-2xl scale-105"
-                    : "border-gray-200 hover:border-gray-900"
+                    ? "border-blue-500 shadow-2xl scale-105 overflow-visible"
+                    : "border-gray-200 hover:border-gray-900 overflow-hidden"
                 }`}>
                   {/* Animated blue border at top - moves left to right (only for non-highlighted) */}
                   {!tier.highlighted && (
@@ -393,8 +385,8 @@ export default function ProductWebsitesPage() {
                       href="#cta"
                       className={`block text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                         tier.highlighted
-                          ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
-                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                          ? "btn-primary text-white"
+                          : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                       }`}
                     >
                       Get Started
@@ -531,13 +523,13 @@ export default function ProductWebsitesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#cta"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
               >
                 Start Your Website Project
               </Link>
               <Link
                 href="/#cta"
-                className="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all duration-300 border-2 border-white/20"
+                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
               >
                 View Website Portfolio
               </Link>

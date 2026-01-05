@@ -47,7 +47,7 @@ export default function TopNavigation() {
             {/* CTA Button */}
             <a
               href="#contact"
-              className="px-4 sm:px-6 py-2 sm:py-2.5 bg-blue-600 text-white rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm hover:bg-blue-700 hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="btn-primary px-4 sm:px-6 py-2 sm:py-2.5 text-white rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm"
             >
               Book a Call
             </a>

@@ -2,11 +2,10 @@
 
 export default function LogoCarousel() {
   const companies = [
-    "Stripe",
-    "Shopify",
-    "GitHub",
-    "Netflix",
-    "Spotify",
+    "LEVERAGEFLO",
+    "INCARTON",
+    "APPSMOVE",
+    "PRUSHIP",
   ];
 
   // Duplicate the array for seamless infinite scroll

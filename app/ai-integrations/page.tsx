@@ -256,12 +256,12 @@ export default function AIIntegrationsPage() {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
               {[
                 {
                   name: "AI Feature Integration",
                   description: "Add 1-3 AI features to your existing product",
-                  price: "Starting at $15,000",
+                  price: "$8,000",
                   features: [
                     "Feature design & UX",
                     "API integration",
@@ -272,9 +272,9 @@ export default function AIIntegrationsPage() {
                   highlighted: false
                 },
                 {
-                  name: "Comprehensive AI Enhancement",
+                  name: "Comprehensive",
                   description: "Transform your product with AI across multiple touchpoints",
-                  price: "Starting at $40,000",
+                  price: "$20,000",
                   features: [
                     "Full product audit",
                     "5-10 AI features",
@@ -283,25 +283,12 @@ export default function AIIntegrationsPage() {
                     "8-week delivery"
                   ],
                   highlighted: true
-                },
-                {
-                  name: "Enterprise AI Platform",
-                  description: "Complete AI infrastructure for your organization",
-                  price: "Starting at $85,000",
-                  features: [
-                    "Multi-product integration",
-                    "Custom model development",
-                    "MLOps setup",
-                    "Team training",
-                    "Ongoing support"
-                  ],
-                  highlighted: false
                 }
               ].map((tier, index) => (
-                <div key={index} className={`group relative bg-white p-8 rounded-2xl border-2 transition-all duration-300 overflow-hidden ${
+                <div key={index} className={`group relative bg-white p-10 rounded-2xl border-2 transition-all duration-300 ${
                   tier.highlighted
-                    ? "border-blue-500 shadow-2xl scale-105"
-                    : "border-gray-200 hover:border-gray-900"
+                    ? "border-blue-500 shadow-2xl scale-105 overflow-visible"
+                    : "border-gray-200 hover:border-gray-900 overflow-hidden"
                 }`}>
                   {/* Animated blue border at top - moves left to right (only for non-highlighted) */}
                   {!tier.highlighted && (
@@ -318,25 +305,25 @@ export default function AIIntegrationsPage() {
                   )}
 
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                    <p className="text-gray-600 mb-4 text-sm">{tier.description}</p>
-                    <p className="text-3xl font-bold text-blue-600 mb-6">{tier.price}</p>
-                    <ul className="space-y-3 mb-8">
+                    <h3 className="text-3xl font-bold text-gray-900 mb-3">{tier.name}</h3>
+                    <p className="text-gray-600 mb-6 text-base">{tier.description}</p>
+                    <p className="text-4xl font-bold text-blue-600 mb-8">{tier.price}</p>
+                    <ul className="space-y-4 mb-10">
                       {tier.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start gap-2">
-                          <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li key={fIndex} className="flex items-start gap-3">
+                          <svg className="w-6 h-6 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                          <span className="text-gray-700 text-base">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
                       href="#cta"
-                      className={`block text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
+                      className={`block text-center py-4 px-8 rounded-xl font-bold text-lg transition-all duration-300 ${
                         tier.highlighted
-                          ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg"
-                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                          ? "btn-primary text-white"
+                          : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                       }`}
                     >
                       Get Started
@@ -413,13 +400,13 @@ export default function AIIntegrationsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#cta"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
               >
                 Get AI Integration Roadmap
               </Link>
               <Link
                 href="/#cta"
-                className="bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-800 transition-all duration-300 border-2 border-white/20"
+                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
               >
                 See Integration Examples
               </Link>
