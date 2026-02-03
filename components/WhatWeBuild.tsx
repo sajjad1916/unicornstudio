@@ -8,6 +8,10 @@ export default function WhatWeBuild() {
 
   const services = [
     {
+      name: "SaaS Products",
+      description: "From first commit to full-scale SaaS. We build, test, and launch alongside you."
+    },
+    {
       name: "AI Solutions",
       description: "Custom AI implementations that solve real business problems. From intelligent automation to predictive analytics, we make AI work for your specific use case."
     },

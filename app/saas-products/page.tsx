@@ -19,7 +19,7 @@ export default function SaaSProductsPage() {
                 <span className="gradient-text-modern inline-block mt-2">Recurring Revenue</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                From first commit to full-scale SaaS. We build, test, and launch alongside you.
+                We build SaaS products that acquire users, retain customers, and scale sustainably. Strategy, design, and development under one roof.
               </p>
             </div>
           </div>

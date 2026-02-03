@@ -30,7 +30,7 @@ export default function CTA() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
           <a
-            href="mailto:hello@unicornstudio.com"
+            href="mailto:contact@unicornstudio.io"
             className="btn-primary group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-white rounded-lg text-sm sm:text-base font-semibold text-center"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
