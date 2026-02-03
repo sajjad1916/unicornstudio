@@ -34,17 +34,11 @@ export default function CTA() {
             className="btn-primary group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-white rounded-lg text-sm sm:text-base font-semibold text-center"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              Schedule a Strategy Call
+              LET'S BUILD
               <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </span>
-          </a>
-          <a
-            href="mailto:hello@unicornstudio.com"
-            className="btn-secondary w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 text-white rounded-lg text-sm sm:text-base font-semibold border-2 border-white/20 backdrop-blur-sm text-center"
-          >
-            <span className="relative z-10">hello@unicornstudio.com</span>
           </a>
         </div>
 

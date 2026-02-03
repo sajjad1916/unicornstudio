@@ -19,7 +19,7 @@ export default function SaaSProductsPage() {
                 <span className="gradient-text-modern inline-block mt-2">Recurring Revenue</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                We build SaaS products that acquire users, retain customers, and scale sustainably. Strategy, design, and development under one roof.
+                From first commit to full-scale SaaS. We build, test, and launch alongside you.
               </p>
             </div>
           </div>
@@ -80,89 +80,6 @@ export default function SaaSProductsPage() {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Deliver */}
-        <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                What We Deliver
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {[
-                {
-                  title: "User Management",
-                  items: [
-                    "Secure authentication (SSO, 2FA)",
-                    "Role-based permissions",
-                    "Team workspaces",
-                    "Invitation flows"
-                  ]
-                },
-                {
-                  title: "Subscription & Billing",
-                  items: [
-                    "Stripe/Paddle integration",
-                    "Flexible pricing models",
-                    "Usage-based billing",
-                    "Invoice generation"
-                  ]
-                },
-                {
-                  title: "Core Infrastructure",
-                  items: [
-                    "Multi-tenant architecture",
-                    "API development",
-                    "Webhook management",
-                    "Background jobs"
-                  ]
-                },
-                {
-                  title: "Admin Tools",
-                  items: [
-                    "Customer dashboard",
-                    "Analytics & metrics",
-                    "Support tools",
-                    "Feature flags"
-                  ]
-                },
-                {
-                  title: "Growth Features",
-                  items: [
-                    "Onboarding flows",
-                    "In-app messaging",
-                    "Referral programs",
-                    "Email automation"
-                  ]
-                }
-              ].map((feature, index) => (
-                <div key={index} className="group relative bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-gray-900 transition-colors duration-300 overflow-hidden">
-                  {/* Animated blue border at top - moves left to right */}
-                  <div className="absolute top-0 left-0 h-1.5 w-full bg-blue-600 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out rounded-t-2xl" />
-
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">{feature.title}</h3>
-                    <ul className="space-y-3">
-                      {feature.items.map((item, iIndex) => (
-                        <li key={iIndex} className="flex items-start gap-2">
-                          <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="text-gray-700 text-sm">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -348,7 +265,7 @@ export default function SaaSProductsPage() {
                           : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                       }`}
                     >
-                      Get Started
+                      LET'S BUILD
                     </Link>
                   </div>
                 </div>
@@ -476,15 +393,9 @@ export default function SaaSProductsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#cta"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
+                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               >
-                Start Your SaaS Journey
-              </Link>
-              <Link
-                href="/#cta"
-                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
-              >
-                View SaaS Case Studies
+                LET'S BUILD
               </Link>
             </div>
           </div>

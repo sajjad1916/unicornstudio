@@ -395,7 +395,7 @@ export default function MobileAppsPage() {
                           : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                       }`}
                     >
-                      Get Started
+                      LET'S BUILD
                     </Link>
                   </div>
                 </div>
@@ -523,15 +523,9 @@ export default function MobileAppsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/#cta"
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-xl btn-secondary border-2 border-white/20 hover:border-blue-400"
+                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               >
-                Start Your Mobile App
-              </Link>
-              <Link
-                href="/#cta"
-                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 border-2 border-white/20"
-              >
-                See App Portfolio
+                LET'S BUILD
               </Link>
             </div>
           </div>

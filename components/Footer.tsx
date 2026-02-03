@@ -23,9 +23,9 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Brand Section */}
-            <div className="lg:col-span-5">
+            <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
 
             {/* Services Links */}
-            <div className="lg:col-span-3">
+            <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4">Services</h4>
               <ul className="space-y-3">
                 {navigation.services.map((item) => (
@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
 
             {/* Company Links */}
-            <div className="lg:col-span-2">
+            <div>
               <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
               <ul className="space-y-3">
                 {navigation.company.map((item) => (
@@ -94,20 +94,6 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* CTA Box */}
-            <div className="lg:col-span-2">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
-                <h4 className="text-sm font-semibold text-gray-900 mb-2">Start Your Project</h4>
-                <p className="text-xs text-gray-600 mb-3">Book a free strategy call today</p>
-                <a
-                  href="#contact"
-                  className="block w-full py-2 px-4 bg-blue-600 text-white rounded-lg text-xs font-semibold text-center hover:bg-blue-700 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
             </div>
           </div>
         </div>
