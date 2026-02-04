@@ -1,17 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import { useCalendly } from "./CalendlyProvider";
 
 export default function InvestmentTiers() {
   const [activeIndex, setActiveIndex] = useState(1);
+  const { openModal } = useCalendly();
 
   const packages = [
     {
       tag: "Quick Launch",
       name: "Product Website",
       outcome: "High-converting website that drives action. Perfect for launching products or validating ideas.",
-      investment: "4,500",
-      timeline: "3-week turnaround",
+      investment: "8,500",
+      timeline: "4-week turnaround",
       ideal: "Launching products or validating ideas",
       delivers: [
         "Strategy workshop",
@@ -27,8 +29,8 @@ export default function InvestmentTiers() {
       tag: "Most Chosen",
       name: "AI-Powered MVP",
       outcome: "From validated idea to working product. Everything you need to acquire first customers and raise funding.",
-      investment: "12,000",
-      timeline: "4-6 weeks",
+      investment: "20,000",
+      timeline: "9+ weeks",
       ideal: "Acquiring first customers and raising funding",
       delivers: [
         "Strategy & validation",
@@ -36,7 +38,7 @@ export default function InvestmentTiers() {
         "UX/UI design",
         "Core development",
         "AI integration",
-        "30-day post-launch support"
+        "90-day optimization support"
       ],
       color: "indigo",
       gradient: "from-indigo-500/10 via-purple-500/5 to-transparent",
@@ -44,16 +46,16 @@ export default function InvestmentTiers() {
     },
     {
       tag: "Native Experience",
-      name: "Mobile App Package",
-      outcome: "Native or cross-platform apps with backend infrastructure.",
-      investment: "18,000",
-      timeline: "6-8 weeks",
+      name: "Mobile MVP",
+      outcome: "Test your app concept with real users on iOS or Android.",
+      investment: "6,000",
+      timeline: "8 weeks",
       ideal: "Mobile-first products",
       delivers: [
-        "iOS/Android development",
-        "API backend",
-        "App store deployment",
-        "Push notifications",
+        "iOS or Android app",
+        "5-8 core screens",
+        "Basic backend",
+        "App store submission",
         "Analytics integration"
       ],
       color: "cyan",
@@ -64,7 +66,7 @@ export default function InvestmentTiers() {
       name: "Complete SaaS Platform",
       outcome: "Enterprise-ready infrastructure built for growth. Full suite from branding to deployment.",
       investment: "25,000",
-      timeline: "8-12 weeks",
+      timeline: "14 weeks",
       ideal: "Building for scale",
       delivers: [
         "Brand identity system",
@@ -178,12 +180,12 @@ export default function InvestmentTiers() {
               </div>
 
               {/* CTA Button */}
-              <a
-                href="#contact"
+              <button
+                onClick={openModal}
                 className="block w-full py-2.5 px-4 bg-gray-900 text-white rounded-lg font-semibold text-sm text-center hover:bg-gray-800 transition-all duration-300"
               >
-                Start This Package
-              </a>
+                Let's Build
+              </button>
             </div>
           </div>
         </div>
@@ -271,16 +273,16 @@ export default function InvestmentTiers() {
                   </div>
 
                   {/* CTA Button */}
-                  <a
-                    href="#contact"
+                  <button
+                    onClick={openModal}
                     className={`block w-full py-2.5 px-4 rounded-xl font-semibold text-sm text-center transition-all duration-300 ${
                       activeIndex === index
                         ? "bg-gray-900 text-white shadow-lg hover:shadow-xl hover:bg-gray-800"
                         : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                     }`}
                   >
-                    Start This Package
-                  </a>
+                    Let's Build
+                  </button>
                 </div>
 
                 {/* Active Indicator - Top gradient line */}
@@ -346,15 +348,15 @@ export default function InvestmentTiers() {
             <p className="text-base text-gray-300 mb-6 max-w-2xl">
               Every business is unique. Let's build a custom package that fits your specific needs, timeline, and budget.
             </p>
-            <a
-              href="#contact"
+            <button
+              onClick={openModal}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-xl font-semibold hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-105"
             >
               <span>Let's talk about your project</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </div>

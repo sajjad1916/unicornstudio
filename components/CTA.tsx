@@ -1,4 +1,10 @@
+"use client";
+
+import { useCalendly } from "./CalendlyProvider";
+
 export default function CTA() {
+  const { openModal } = useCalendly();
+
   return (
     <section id="contact" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Animated background elements */}
@@ -29,8 +35,8 @@ export default function CTA() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
-          <a
-            href="mailto:contact@unicornstudio.io"
+          <button
+            onClick={openModal}
             className="btn-primary group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-white rounded-lg text-sm sm:text-base font-semibold text-center"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
@@ -39,7 +45,7 @@ export default function CTA() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </span>
-          </a>
+          </button>
         </div>
 
         {/* Response Time Note */}

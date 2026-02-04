@@ -9,31 +9,39 @@ export default function WhatWeBuild() {
   const services = [
     {
       name: "SaaS Products",
-      description: "From first commit to full-scale SaaS. We build, test, and launch alongside you."
+      description: "Full-featured subscription platforms built to scale. Multi-tenant architecture, billing systems, admin dashboards - everything you need for recurring revenue.",
+      link: "/saas-products",
+      linkText: "Explore SaaS Products"
     },
     {
       name: "AI Solutions",
-      description: "Custom AI implementations that solve real business problems. From intelligent automation to predictive analytics, we make AI work for your specific use case."
-    },
-    {
-      name: "SaaS Products",
-      description: "Full-featured subscription platforms built to scale. Multi-tenant architecture, billing systems, admin dashboards - everything you need for recurring revenue."
+      description: "Custom AI implementations that solve real business problems. From intelligent automation to predictive analytics, we make AI work for your specific use case.",
+      link: "/ai-solutions",
+      linkText: "Explore AI Solutions"
     },
     {
       name: "AI Integrations",
-      description: "Enhance your existing products with AI capabilities. OpenAI, Claude, Gemini, or custom models - we integrate intelligence where it matters most."
+      description: "Enhance your existing products with AI capabilities. OpenAI, Claude, Gemini, or custom models - we integrate intelligence where it matters most.",
+      link: "/ai-integrations",
+      linkText: "Explore AI Integrations"
     },
     {
       name: "Mobile Apps",
-      description: "Native and cross-platform apps that users love. iOS, Android, or React Native - we choose the right approach for your audience and budget."
+      description: "Native and cross-platform apps that users love. iOS, Android, or React Native - we choose the right approach for your audience and budget.",
+      link: "/mobile-apps",
+      linkText: "Explore Mobile Apps"
     },
     {
       name: "Product Websites",
-      description: "High-converting web experiences that tell your story. From landing pages to full marketing sites, designed to turn visitors into customers."
+      description: "High-converting web experiences that tell your story. From landing pages to full marketing sites, designed to turn visitors into customers.",
+      link: "/product-websites",
+      linkText: "Explore Product Websites"
     },
     {
       name: "Brand Identity",
-      description: "Strategic branding that sets you apart. Logo, visual system, messaging - we create brands that resonate with your target market."
+      description: "Strategic branding that sets you apart. Logo, visual system, messaging - we create brands that resonate with your target market.",
+      link: "/branding",
+      linkText: "Explore Brand Identity"
     },
   ];
 
@@ -109,72 +117,15 @@ export default function WhatWeBuild() {
                     <p className="text-sm text-gray-700 leading-relaxed mb-3">
                       {service.description}
                     </p>
-                    {index === 0 && (
-                      <Link
-                        href="/ai-solutions"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore AI Solutions
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
-                    {index === 1 && (
-                      <Link
-                        href="/saas-products"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore SaaS Products
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
-                    {index === 2 && (
-                      <Link
-                        href="/ai-integrations"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore AI Integrations
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
-                    {index === 3 && (
-                      <Link
-                        href="/mobile-apps"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore Mobile Apps
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
-                    {index === 4 && (
-                      <Link
-                        href="/product-websites"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore Product Websites
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
-                    {index === 5 && (
-                      <Link
-                        href="/branding"
-                        className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
-                      >
-                        Explore Brand Identity
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </Link>
-                    )}
+                    <Link
+                      href={service.link}
+                      className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors duration-300"
+                    >
+                      {service.linkText}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -240,72 +191,15 @@ export default function WhatWeBuild() {
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   {services[activeService].description}
                 </p>
-                {activeService === 0 && (
-                  <Link
-                    href="/ai-solutions"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore AI Solutions
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
-                {activeService === 1 && (
-                  <Link
-                    href="/saas-products"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore SaaS Products
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
-                {activeService === 2 && (
-                  <Link
-                    href="/ai-integrations"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore AI Integrations
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
-                {activeService === 3 && (
-                  <Link
-                    href="/mobile-apps"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore Mobile Apps
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
-                {activeService === 4 && (
-                  <Link
-                    href="/product-websites"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore Product Websites
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
-                {activeService === 5 && (
-                  <Link
-                    href="/branding"
-                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Explore Brand Identity
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                )}
+                <Link
+                  href={services[activeService].link}
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  {services[activeService].linkText}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,8 +1,11 @@
-import Link from 'next/link';
+"use client";
+
 import TopNavigation from '@/components/TopNavigation';
 import Footer from '@/components/Footer';
+import { useCalendly } from '@/components/CalendlyProvider';
 
 export default function AISolutionsPage() {
+  const { openModal } = useCalendly();
   return (
     <>
       <TopNavigation />
@@ -265,16 +268,16 @@ export default function AISolutionsPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    href="#cta"
-                    className={`block text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
+                  <button
+                    onClick={openModal}
+                    className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                       tier.highlighted
                         ? "btn-primary text-white"
                         : "btn-secondary bg-white text-gray-900 border-2 border-gray-300"
                     }`}
                   >
                     LET'S BUILD
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
@@ -354,12 +357,12 @@ export default function AISolutionsPage() {
             Let's skip the hype and build AI that transforms your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/#cta"
+            <button
+              onClick={openModal}
               className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
             >
               LET'S BUILD
-            </Link>
+            </button>
           </div>
         </div>
       </section>

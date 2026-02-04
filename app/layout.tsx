@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CalendlyProvider } from "@/components/CalendlyProvider";
 
 export const metadata: Metadata = {
   title: "Unicorn Studio - Turn Your Idea Into Scalable AI & SaaS Products",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <div id="calendly-root" />
+        <CalendlyProvider>
+          {children}
+        </CalendlyProvider>
       </body>
     </html>
   );
