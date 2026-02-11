@@ -2,6 +2,7 @@
 
 import TopNavigation from '@/components/TopNavigation';
 import Footer from '@/components/Footer';
+import ServiceTestimonials from '@/components/ServiceTestimonials';
 import { useCalendly } from '@/components/CalendlyProvider';
 
 export default function AISolutionsPage() {
@@ -347,8 +348,10 @@ export default function AISolutionsPage() {
         </div>
       </section>
 
+      <ServiceTestimonials />
+
       {/* CTA Section */}
-      <section id="cta" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
+      <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build Real AI?

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function TopNavigation() {
@@ -35,13 +36,15 @@ export default function TopNavigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo/Brand */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span className="text-base sm:text-lg font-bold text-gray-900">Unicorn Studio</span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/testimonial/main logo.svg"
+                alt="Unicorn Studio"
+                width={160}
+                height={40}
+                className="h-24 sm:h-28 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* CTA Button */}

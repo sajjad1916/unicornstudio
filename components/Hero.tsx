@@ -1,41 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import LogoCarousel from "./LogoCarousel";
 
 export default function Hero() {
-  const [products, setProducts] = useState(0);
-  const [revenue, setRevenue] = useState(0);
-
-  useEffect(() => {
-    // Animate products from 0 to 50+
-    const productInterval = setInterval(() => {
-      setProducts((prev) => {
-        if (prev >= 50) {
-          clearInterval(productInterval);
-          return 50;
-        }
-        return prev + 1;
-      });
-    }, 30);
-
-    // Animate revenue from 0 to 100M
-    const revenueInterval = setInterval(() => {
-      setRevenue((prev) => {
-        if (prev >= 100) {
-          clearInterval(revenueInterval);
-          return 100;
-        }
-        return prev + 2;
-      });
-    }, 30);
-
-    return () => {
-      clearInterval(productInterval);
-      clearInterval(revenueInterval);
-    };
-  }, []);
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-white via-blue-50/30 to-white pt-24 sm:pt-32 pb-8 sm:pb-10">
       {/* Mesh gradient background */}

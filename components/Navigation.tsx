@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
@@ -34,9 +35,14 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <span className={`text-2xl font-bold ${isScrolled ? "gradient-text" : "text-gray-900"}`}>
-              Unicorn Studio
-            </span>
+            <Image
+              src="/testimonial/main logo.svg"
+              alt="Unicorn Studio"
+              width={160}
+              height={40}
+              className="h-24 sm:h-28 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}

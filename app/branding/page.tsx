@@ -2,6 +2,8 @@
 
 import TopNavigation from '@/components/TopNavigation';
 import Footer from '@/components/Footer';
+import ServiceTestimonials from '@/components/ServiceTestimonials';
+import FlipCard from '@/components/FlipCard';
 import { useCalendly } from '@/components/CalendlyProvider';
 
 export default function BrandingPage() {
@@ -154,23 +156,7 @@ export default function BrandingPage() {
                   description: "Complete brand guidelines and assets. Everything needed for consistent application across all touchpoints."
                 }
               ].map((step, index) => (
-                <div key={index} className="group h-64 perspective-1000">
-                  <div className="relative w-full h-full transition-transform duration-700 transform-style-3d group-hover:rotate-y-180">
-                    {/* Front of card */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200 flex flex-col items-center justify-center text-center">
-                      <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
-                        {step.phase}
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{step.title}</h3>
-                      <div className="mt-4 text-xs text-gray-500">Hover to see details</div>
-                    </div>
-
-                    {/* Back of card */}
-                    <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-blue-600 to-indigo-600 p-8 rounded-2xl border-2 border-blue-700 flex items-center justify-center">
-                      <p className="text-white leading-relaxed text-sm text-center">{step.description}</p>
-                    </div>
-                  </div>
-                </div>
+                <FlipCard key={index} phase={step.phase} title={step.title} description={step.description} />
               ))}
             </div>
           </div>
@@ -357,7 +343,7 @@ export default function BrandingPage() {
                 },
                 {
                   name: "SwiftPay - Fintech Mobile App",
-                  description: "Bold, simple brand that stands out in crowded finance category"
+                  description: "Bold, simple brand that stands out in the crowded finance category"
                 },
                 {
                   name: "DevTools - Developer Platform",
@@ -523,8 +509,10 @@ export default function BrandingPage() {
           </div>
         </section>
 
+        <ServiceTestimonials />
+
         {/* CTA Section */}
-        <section id="cta" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
+        <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Build Your Brand?

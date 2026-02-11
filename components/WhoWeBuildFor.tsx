@@ -8,7 +8,7 @@ export default function WhoWeBuildFor() {
     },
     {
       title: "Startup Founders and Entrepreneurs",
-      description: "We make your ideas into products whether you are raising your first round or validating your idea",
+      description: "We make your ideas into products, whether you are raising your first round or validating your idea.",
       icon: "👤",
       features: ["Deep Expertise", "Fast Execution", "Scalable Impact"]
     },

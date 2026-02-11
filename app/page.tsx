@@ -8,6 +8,7 @@ import HowWeBuild from "@/components/HowWeBuild";
 import InvestmentTiers from "@/components/InvestmentTiers";
 import RecentLaunches from "@/components/RecentLaunches";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -26,6 +27,7 @@ export default function Home() {
         <InvestmentTiers />
         <RecentLaunches />
         <WhyChooseUs />
+        <Testimonials />
         <FAQ />
         <CTA />
         <Footer />
