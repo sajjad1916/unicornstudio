@@ -98,7 +98,7 @@ export default function BottomNavigation() {
 
   return (
     <nav
-      className={`fixed bottom-0 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 transition-all duration-500 ${
+      className={`fixed bottom-0 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 transition-all duration-500 hidden md:block ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0 pointer-events-none"
       }`}
     >
