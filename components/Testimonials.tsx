@@ -12,49 +12,49 @@ const testimonials = [
     name: "Melissa Pancoast",
     role: "Operations Director",
     quote:
-      "Our customer response time went from 8 hours to 30 seconds. Customer satisfaction scores increased 45% in the first month.",
+      "They built our SaaS MVP in just 4 weeks and we had paying customers within the first month. The subscription billing and admin dashboard worked flawlessly from day one.",
     stats: [
-      { label: "45% ↑ Satisfaction", bg: "bg-green-50", text: "text-green-700" },
-      { label: "30 Second Response", bg: "bg-blue-50", text: "text-blue-700" },
+      { label: "4-Week MVP", bg: "bg-green-50", text: "text-green-700" },
+      { label: "Paying Customers in Month 1", bg: "bg-blue-50", text: "text-blue-700" },
     ],
     image: Melissa,
-    tag: "AI SaaS MVP",
+    tag: "SaaS MVP",
   },
   {
     name: "Daniel Luu",
     role: "CEO",
     quote:
-      "We eliminated 80% of manual data entry and redirected our team to strategic growth initiatives. Revenue increased 200% in 6 months.",
+      "Our mobile app hit 50K downloads in the first quarter. The native experience and push notifications drove incredible retention rates we never expected.",
     stats: [
-      { label: "200% ↑ Revenue", bg: "bg-green-50", text: "text-green-700" },
-      { label: "80% Less Manual Work", bg: "bg-blue-50", text: "text-blue-700" },
+      { label: "50K Downloads", bg: "bg-green-50", text: "text-green-700" },
+      { label: "4.8 Star Rating", bg: "bg-blue-50", text: "text-blue-700" },
     ],
     image: Daniel,
-    tag: "AI Agent & Automation",
+    tag: "Mobile App",
   },
   {
     name: "Lokesh Johri",
     role: "CTO & Co-Founder",
     quote:
-      "The platform's analytics tools helped us optimize our campaigns, boosting conversion rates by 60% in just three months.",
+      "The AI integration into our existing platform automated 80% of our manual workflows. Our team now focuses on strategy instead of repetitive tasks.",
     stats: [
-      { label: "60% ↑ Conversions", bg: "bg-green-50", text: "text-green-700" },
-      { label: "3 Month ROI", bg: "bg-blue-50", text: "text-blue-700" },
+      { label: "80% Automation", bg: "bg-green-50", text: "text-green-700" },
+      { label: "3x Team Productivity", bg: "bg-blue-50", text: "text-blue-700" },
     ],
     image: Lokesh,
-    tag: "AI SaaS MVP",
+    tag: "AI Integration",
   },
   {
     name: "Tivan Amour",
     role: "CTO",
     quote:
-      "Integration was seamless, and we scaled our operations by 150% without additional overhead. Truly transformative.",
+      "Our new product website tripled our conversion rate overnight. The copy, design, and SEO optimization were all dialed in perfectly.",
     stats: [
-      { label: "150% ↑ Scale", bg: "bg-green-50", text: "text-green-700" },
-      { label: "Zero Overhead", bg: "bg-teal-50", text: "text-teal-700" },
+      { label: "3x Conversions", bg: "bg-green-50", text: "text-green-700" },
+      { label: "Sub-Second Load Time", bg: "bg-teal-50", text: "text-teal-700" },
     ],
     image: Tivan,
-    tag: "AI Agent & Automation",
+    tag: "Product Website",
   },
 ];
 

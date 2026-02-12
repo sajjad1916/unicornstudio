@@ -2,7 +2,7 @@
 
 import TopNavigation from '@/components/TopNavigation';
 import Footer from '@/components/Footer';
-import ServiceTestimonials from '@/components/ServiceTestimonials';
+
 import { useCalendly } from '@/components/CalendlyProvider';
 
 export default function AIIntegrationsPage() {
@@ -392,7 +392,6 @@ export default function AIIntegrationsPage() {
           </div>
         </section>
 
-        <ServiceTestimonials />
 
         {/* CTA Section */}
         <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">

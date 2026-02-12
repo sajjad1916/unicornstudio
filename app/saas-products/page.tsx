@@ -2,7 +2,7 @@
 
 import TopNavigation from '@/components/TopNavigation';
 import Footer from '@/components/Footer';
-import ServiceTestimonials from '@/components/ServiceTestimonials';
+
 import FlipCard from '@/components/FlipCard';
 import { useCalendly } from '@/components/CalendlyProvider';
 
@@ -370,7 +370,6 @@ export default function SaaSProductsPage() {
           </div>
         </section>
 
-        <ServiceTestimonials />
 
         {/* CTA Section */}
         <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
