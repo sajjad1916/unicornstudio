@@ -325,7 +325,7 @@ export default function MobileAppsPage() {
                     "iOS or Android",
                     "5-8 core screens",
                     "Basic backend",
-                    "8-week delivery"
+                    "4-week delivery"
                   ],
                   highlighted: false
                 },

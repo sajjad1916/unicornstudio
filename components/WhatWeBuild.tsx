@@ -9,7 +9,7 @@ export default function WhatWeBuild() {
   const services = [
     {
       name: "SaaS Products",
-      description: "Full-featured subscription platforms built to scale. Multi-tenant architecture, billing systems, admin dashboards - everything you need for recurring revenue.",
+      description: "From first commit to full-scale SaaS. We build, test, and launch alongside you.",
       link: "/saas-products",
       linkText: "Explore SaaS Products"
     },

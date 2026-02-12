@@ -9,36 +9,32 @@ export default function InvestmentTiers() {
 
   const packages = [
     {
-      tag: "Quick Launch",
-      name: "Product Website",
-      outcome: "High-converting website that drives action. Perfect for launching products or validating ideas.",
-      investment: "8,500",
-      timeline: "4-week turnaround",
-      ideal: "Launching products or validating ideas",
+      tag: "SaaS Launch",
+      name: "SaaS MVP",
+      outcome: "Validate your concept with paying customers",
+      investment: "8,000",
+      timeline: "4 weeks",
+      ideal: "Validating SaaS concepts",
       delivers: [
-        "Strategy workshop",
-        "Professional copywriting",
-        "Responsive design",
-        "CMS integration",
-        "SEO optimization"
+        "Core feature set",
+        "Payment integration",
+        "Basic admin panel"
       ],
       color: "blue",
       gradient: "from-blue-500/10 via-cyan-500/5 to-transparent"
     },
     {
       tag: "Most Chosen",
-      name: "AI-Powered MVP",
-      outcome: "From validated idea to working product. Everything you need to acquire first customers and raise funding.",
-      investment: "20,000",
-      timeline: "9+ weeks",
-      ideal: "Acquiring first customers and raising funding",
+      name: "Complete SaaS Development",
+      outcome: "Production-ready platform built to scale",
+      investment: "25,000",
+      timeline: "14 weeks",
+      ideal: "Building for scale",
       delivers: [
-        "Strategy & validation",
-        "Brand foundation",
-        "UX/UI design",
-        "Core development",
-        "AI integration",
-        "90-day optimization support"
+        "Complete feature set",
+        "Advanced billing",
+        "Analytics dashboard",
+        "API & webhooks"
       ],
       color: "indigo",
       gradient: "from-indigo-500/10 via-purple-500/5 to-transparent",
@@ -47,34 +43,29 @@ export default function InvestmentTiers() {
     {
       tag: "Native Experience",
       name: "Mobile MVP",
-      outcome: "Test your app concept with real users on iOS or Android.",
+      outcome: "Test your app concept with real users",
       investment: "6,000",
-      timeline: "8 weeks",
+      timeline: "4 weeks",
       ideal: "Mobile-first products",
       delivers: [
-        "iOS or Android app",
+        "iOS or Android",
         "5-8 core screens",
-        "Basic backend",
-        "App store submission",
-        "Analytics integration"
+        "Basic backend"
       ],
       color: "cyan",
       gradient: "from-cyan-500/10 via-blue-500/5 to-transparent"
     },
     {
-      tag: "Full Stack",
-      name: "Complete SaaS Platform",
-      outcome: "Enterprise-ready infrastructure built for growth. Full suite from branding to deployment.",
-      investment: "25,000",
-      timeline: "14 weeks",
-      ideal: "Building for scale",
+      tag: "Quick Launch",
+      name: "Landing Page",
+      outcome: "Single page that converts",
+      investment: "3,500",
+      timeline: "2 weeks",
+      ideal: "Launching products fast",
       delivers: [
-        "Brand identity system",
-        "Comprehensive UX research",
-        "Multi-tenant architecture",
-        "Payment & subscription handling",
-        "Admin dashboards",
-        "90-day growth partnership"
+        "Hero to CTA optimization",
+        "Mobile-responsive",
+        "Form integration"
       ],
       color: "violet",
       gradient: "from-violet-500/10 via-fuchsia-500/5 to-transparent"

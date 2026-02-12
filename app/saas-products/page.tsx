@@ -195,7 +195,7 @@ export default function SaaSProductsPage() {
                     "Core feature set",
                     "Payment integration",
                     "Basic admin panel",
-                    "10-week timeline"
+                    "4-week timeline"
                   ],
                   highlighted: false
                 },
