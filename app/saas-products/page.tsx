@@ -383,7 +383,7 @@ export default function SaaSProductsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openModal}
-                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+                className="btn-primary-light px-8 py-4 text-blue-700 rounded-xl font-semibold text-lg"
               >
                 LET'S BUILD
               </button>

@@ -455,51 +455,6 @@ export default function MobileAppsPage() {
           </div>
         </section>
 
-        {/* App Store Success Factors */}
-        <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                App Store Success Factors
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {[
-                {
-                  title: "Great First Impression",
-                  description: "Screenshots that sell, descriptions that convert, and reviews that build trust."
-                },
-                {
-                  title: "Retention Mechanics",
-                  description: "Push notifications, streaks, rewards - features that bring users back daily."
-                },
-                {
-                  title: "Viral Growth",
-                  description: "Social sharing, referral programs, network effects - built-in growth engines."
-                },
-                {
-                  title: "Monetization Strategy",
-                  description: "Subscriptions, in-app purchases, ads - revenue models that align with user value."
-                }
-              ].map((reason, index) => (
-                <div key={index} className="group relative bg-white p-8 rounded-2xl border-2 border-gray-200 hover:border-gray-900 transition-colors duration-300 overflow-hidden">
-                  {/* Animated blue border at top */}
-                  <div className="absolute top-0 left-0 h-1.5 w-full bg-blue-600 transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700 ease-out rounded-t-2xl" />
-
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{reason.title}</h3>
-                    <p className="text-gray-700 leading-relaxed">{reason.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
 
         {/* CTA Section */}
         <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-blue-600 to-indigo-600">
@@ -513,7 +468,7 @@ export default function MobileAppsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openModal}
-                className="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+                className="btn-primary-light px-8 py-4 text-blue-700 rounded-xl font-semibold text-lg"
               >
                 LET'S BUILD
               </button>
